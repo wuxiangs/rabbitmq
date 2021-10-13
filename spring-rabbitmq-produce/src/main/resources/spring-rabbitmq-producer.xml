@@ -22,6 +22,14 @@
     <rabbit:admin connection-factory="connectionFactory"/>
 
     <!--定义持久化队列,不存在则自动创建,不绑定交换机则绑定默认交换机,默认交换机类型是direct,名字为"",路由键为队列的名字-->
+    <!--
+      id:bean的名称
+      name:queue的名称
+      auto-declare:自动创建
+      auto-delete:自动删除
+      exclusive:是否独占
+      durable:是否持久化
+    -->
     <rabbit:queue id="spring_queue" name="spring_queue" auto-declare="true"/>
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~广播：所有队列都能接受到信息~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -30,6 +38,9 @@
     <!--定义持久化队列,不存在则自动创建-->
     <rabbit:queue id="spring_fanout_queue2" name="spring_fanout_queue2" auto-declare="true"/>
     <!--定义广播类型交换机,并绑定上述两个队列-->
+    <!--
+
+    -->
     <rabbit:fanout-exchange id="spring_fanout_exchange" name="spring_fanout_exchange" auto-declare="true">
         <rabbit:bindings>
             <rabbit:binding queue="spring_fanout_queue1"/>
