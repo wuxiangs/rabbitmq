@@ -30,11 +30,11 @@
       exclusive:是否独占
       durable:是否持久化
     -->
-    <rabbit:queue id="spring_queue" name="spring_queue" auto-declare="true"/>
+    <rabbit:queue id="spring_queue" name="spring_queue" auto-declare="true" />
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~广播：所有队列都能接受到信息~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <!--定义持久化队列,不存在则自动创建-->
-    <rabbit:queue id="spring_fanout_queue1" name="spring_fanout_queue1" auto-declare="true"/>
+    <rabbit:queue id="spring_fanout_queue1" name="spring_fanout_queue1" auto-declare="true" />
     <!--定义持久化队列,不存在则自动创建-->
     <rabbit:queue id="spring_fanout_queue2" name="spring_fanout_queue2" auto-declare="true"/>
     <!--定义广播类型交换机,并绑定上述两个队列-->
