@@ -33,6 +33,5 @@
         <rabbit:listener ref="topicListenerStar" queue-names="spring_topic_queue_star"/>
         <rabbit:listener ref="topicListenerWell1" queue-names="spring_topic_queue_well1"/>
         <rabbit:listener ref="topicListenerWell2" queue-names="spring_topic_queue_well2"/>
-
     </rabbit:listener-container>
 </beans>
