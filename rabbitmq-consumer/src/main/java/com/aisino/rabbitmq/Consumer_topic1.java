@@ -17,7 +17,7 @@ public class Consumer_topic1 {
         ConnectionFactory connectionFactory=new ConnectionFactory();
         //2.设置参数
         //默认值localhost
-        connectionFactory.setHost("192.168.1.19");
+        connectionFactory.setHost("192.168.1.16");
         //默认值 /
         connectionFactory.setVirtualHost("/itcast");
         //默认值 guest
