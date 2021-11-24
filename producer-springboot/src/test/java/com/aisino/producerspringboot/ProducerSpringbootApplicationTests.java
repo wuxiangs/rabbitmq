@@ -13,7 +13,7 @@ class ProducerSpringbootApplicationTests {
     private RabbitTemplate rabbitTemplate;
 
     @Test
-    public void testSend(){
+    public void testSend() {
         rabbitTemplate.convertAndSend(RabbitmqConfig.EXCHANGE_NAME,"boot.wx","boot mq hello");
     }
 

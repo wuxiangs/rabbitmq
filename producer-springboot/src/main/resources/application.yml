@@ -1,7 +1,7 @@
 #配置rabbitmq的基本信息
 spring:
   rabbitmq:
-    host: 192.168.1.19
+    host: 192.168.1.16
     port: 5672
     username: guest
     password: guest
