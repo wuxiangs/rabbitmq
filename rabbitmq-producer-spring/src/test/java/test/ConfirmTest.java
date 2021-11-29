@@ -150,4 +150,12 @@ public class ConfirmTest {
         }
 
     }
+
+    /**
+     * 延迟队列
+     */
+    @Test
+    public void testDelayQueue(){
+        rabbitTemplate.convertAndSend("order_exchange","order.message","订单信息：id=1,time:2021-10-10");
+    }
 }
